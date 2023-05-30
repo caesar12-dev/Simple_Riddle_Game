@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="style-2.css" />
+    <title>RIDDLE</title>
+  </head>
+  <body>
+    <!--front page -->
+
+    <section id="vanta" class="vanta">
+      <div class="btn-container">
+        <button
+          id="startButton"
+          class="start-button"
+          onclick="revealContent()"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        ></button>
+      </div>
+
+      <!-- content 1 -->
+      <div class="content" id="content">
+        <div class="content1">
+          <h1>Artix and Athena!</h1>
+          <p>Hurry! The fate of the Grand Order rests in your hands,</p>
+          <p>as you two are the chosen ones. Time is running out,</p>
+          <p>but you hold the key to solving the code.</p>
+          <p>Do you possess the map? Utilize it to aid</p>
+          <p>your quest for clues before it's too late!</p>
+        </div>
+
+        <div class="boy-img"><img src="images/boy.png"></div>
+
+        <div class="girl-img"><img src="images/girl.png"></div>
+
+        <div class="guide-img" id="guide-img" data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
+          <img src="images/pngfind.com-aqw-png-6780380.png">
+        </div>
+        <div class="guide2-img" id="guide2-img" data-aos="zoom-in" data-aos-delay="700" data-aos-duration="800">
+          <img src="images/pngwing.com (1).png">
+        </div>
+        <div class="guide3-img" id="guide3-img">
+          <img src="images/pngwing.com.png"  data-aos="zoom-in-right" data-aos-delay="700" data-aos-duration="800" />
+        </div>
+      </div>
+
+      <div class="fade"></div>
+    </section>
+    <div class="content234">
+      <!-- Content 2 -->
+      <div class="content2" id="content2">
+        <div class="content2-top-ackground"></div>
+        <div class="content2-background" id="content2-background">
+          <div
+            class="about-content2"
+            data-aos="flip-down"
+            data-aos-delay="800"
+            data-aos-duration="900"
+          >
+            <h3
+              data-aos="fade-up"
+              data-aos-delay="700"
+              data-aos-duration="800"
+              style="color: rgb(229, 255, 0)"
+            >
+              The Chosens have discovered Vylgax's hidden vault, which holds the
+              crucial key to saving the Grand Order.
+            </h3>
+            <br />
+            <h3 data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
+              However, gaining access to the vault requires deciphering a set
+            </h3>
+
+            <h3 data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
+              of combination locks.
+            </h3>
+
+            <h3 data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
+              Luckily, your treasure map provides three codes.
+            </h3>
+            <br />
+            <h3
+              data-aos="fade-up"
+              data-aos-delay="700"
+              data-aos-duration="700"
+              style="color: red"
+            >
+              Unfortunately, the final code is missing.
+            </h3>
+            <br />
+
+            <a
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="700"
+              data-aos-duration="700"
+              onclick="toggleImageVisibility(); return false;"
+              >Code Image</a
+            >
+
+            <img
+              id="myImage"
+              src="images/code.png"
+              alt="Image"
+              class="hidden"
+              data-aos="fade-up-left"/>
+          </div>
+          <div class="divider"></div>
+        </div>
+      </div>
+      <!-- Content 3 -->
+      <div class="content3" id="content3">
+        <div class="content3-background">
+          <h1 data-aos="zoom-in">Clues</h1>
+
+          <div
+            class="swiper"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+            data-aos-duration="600"
+          >
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <p>
+                  1.) The number of times I appear in my own representation is
+                  equal to my value. Explanation: Each digit in the number
+                  represents the frequency of that digit in the entire number.
+                  For example, if the number is 2020, there are two 0s, zero 1s,
+                  two 2s, and zero 3s.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <p>
+                  2.) The digit in the first position idicates how many times
+                  zero occurs.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <p>
+                  3.) The last digit of an autobiographical number represents
+                  the total count of digits in the number itself.
+                </p>
+              </div>
+
+              <div class="swiper-slide">
+                <p>
+                  4.) For every subsequent position, a digit at position "N"
+                  indicates how many times digit "n" occurs.
+                </p>
+              </div>
+
+              <div class="swiper-slide">
+                <p>5.) The sum of my digits is equal to my value.</p>
+              </div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <div class="divider"></div>
+        </div>
+      </div>
+      <!-- Content 4 -->
+      <div class="content4" id="content4">
+        <div class="content4-background">
+          <h1 data-aos="zoom-in-up">Combination Lock</h1>
+          <div id="lock">
+            <div
+              class="dial"
+              data-aos="flip-left"
+              data-aos-delay="500"
+              data-aos-duration="600"
+            >
+              <div class="number">1</div>
+            </div>
+            <div
+              class="dial"
+              data-aos="flip-left"
+              data-aos-delay="500"
+              data-aos-duration="600"
+            >
+              <div class="number">2</div>
+            </div>
+            <div
+              class="dial"
+              data-aos="flip-left"
+              data-aos-delay="500"
+              data-aos-duration="600"
+            >
+              <div class="number">1</div>
+            </div>
+            <div
+              class="dial"
+              data-aos="flip-left"
+              data-aos-delay="500"
+              data-aos-duration="600"
+            >
+              <div class="number">0</div>
+            </div>
+          </div>
+
+          <div id="lock">
+            <div
+              class="dial"
+              data-aos="flip-right"
+              data-aos-delay="600"
+              data-aos-duration="700"
+            >
+              <div class="number">3</div>
+            </div>
+            <div
+              class="dial"
+              data-aos="flip-right"
+              data-aos-delay="600"
+              data-aos-duration="700"
+            >
+              <div class="number">2</div>
+            </div>
+            <div
+              class="dial"
+              data-aos="flip-right"
+              data-aos-delay="600"
+              data-aos-duration="700"
+            >
+              <div class="number">1</div>
+            </div>
+            <div
+              class="dial"
+              data-aos="flip-right"
+              data-aos-delay="600"
+              data-aos-duration="700"
+            >
+              <div class="number">1</div>
+            </div>
+            <div
+              class="dial"
+              data-aos="flip-right"
+              data-aos-delay="600"
+              data-aos-duration="700"
+            >
+              <div class="number">0</div>
+            </div>
+            <div
+              class="dial"
+              data-aos="flip-right"
+              data-aos-delay="600"
+              data-aos-duration="700"
+            >
+              <div class="number">0</div>
+            </div>
+            <div
+              class="dial"
+              data-aos="flip-right"
+              data-aos-delay="600"
+              data-aos-duration="700"
+            >
+              <div class="number">0</div>
+            </div>
+          </div>
+
+          <div id="lock">
+            <div
+              class="dial"
+              id="dial1"
+              data-aos="flip-left"
+              data-aos-delay="700"
+              data-aos-duration="800"
+            >
+              <input type="text" maxlength="1" />
+            </div>
+            <div
+              class="dial"
+              id="dial2"
+              data-aos="flip-left"
+              data-aos-delay="700"
+              data-aos-duration="800"
+            >
+              <input type="text" maxlength="1" />
+            </div>
+            <div
+              class="dial"
+              id="dial3"
+              data-aos="flip-left"
+              data-aos-delay="700"
+              data-aos-duration="800"
+            >
+              <input type="text" maxlength="1" />
+            </div>
+            <div
+              class="dial"
+              id="dial4"
+              data-aos="flip-left"
+              data-aos-delay="700"
+              data-aos-duration="800"
+            >
+              <input type="text" maxlength="1" />
+            </div>
+            <div
+              class="dial"
+              id="dial5"
+              data-aos="flip-left"
+              data-aos-delay="700"
+              data-aos-duration="800"
+            >
+              <input type="text" maxlength="1" />
+            </div>
+            <div
+              class="dial"
+              id="dial6"
+              data-aos="flip-left"
+              data-aos-delay="700"
+              data-aos-duration="800"
+            >
+              <input type="text" maxlength="1" />
+            </div>
+            <div
+              class="dial"
+              id="dial7"
+              data-aos="flip-left"
+              data-aos-delay="700"
+              data-aos-duration="800"
+            >
+              <input type="text" maxlength="1" />
+            </div>
+            <div
+              class="dial"
+              id="dial8"
+              data-aos="flip-left"
+              data-aos-delay="700"
+              data-aos-duration="800"
+            >
+              <input type="text" maxlength="1" />
+            </div>
+            <div
+              class="dial"
+              id="dial9"
+              data-aos="flip-left"
+              data-aos-delay="700"
+              data-aos-duration="800"
+            >
+              <input type="text" maxlength="1" />
+            </div>
+            <div
+              class="dial"
+              id="dial10"
+              data-aos="flip-left"
+              data-aos-delay="700"
+              data-aos-duration="800"
+            >
+              <input type="text" maxlength="1" />
+            </div>
+          </div>
+
+          <button
+            id="checkBtn"
+            class="guess-button"
+            data-aos="zoom-in"
+            data-aos-delay="600"
+            data-aos-duration="800"
+          ></button>
+        </div>
+
+        <div class="content4-bottom-ackground"></div>
+      </div>
+
+      <footer id="footer">
+        <div class="footer-content">
+          <div class="designer-info">
+            <h3>Designed by:</h3>
+            <div class="info">
+              <p>Jeremy Christian Sosa</p>
+              <p>Graphic Designer/Front-end Developer</p>
+              <p>Contact: jeremysosa1011@gmail.com</p>
+            </div>
+          </div>
+          <div class="developer-info">
+            <h3>Developed by:</h3>
+            <div class="info">
+              <p>Caesar Luis II M. Claridad</p>
+              <p>Front-end Developer</p>
+              <p>Contact: sesar091913@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </footer>      
+    </div>
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!--for the content 2,3, and 4 to appear-->
+    <script>
+      AOS.init();
+
+      function revealContent() {
+        var startButton = document.getElementById("startButton");
+        var content = document.getElementById("content");
+        var content2 = document.getElementById("content2");
+        var footer = document.getElementById("footer");
+
+        startButton.style.display = "none";
+        content.style.display = "block";
+        content2.style.display = "block";
+        content3.style.display = "block";
+        content4.style.display = "block";
+        footer.style.display = "block";
+        
+
+        AOS.refresh();
+      }
+    </script>
+
+    <!--for img-->
+    <script>
+      function toggleImageVisibility() {
+        var image = document.getElementById("myImage");
+        var div = document.getElementById("content2-background");
+        var guide2 = document.getElementById("guide2-img");
+        var guide3 = document.getElementById("guide3-img");
+        var mediaQuery = window.matchMedia("(max-width: 800px)");
+        var mediaQuery1 = window.matchMedia("(min-width: 800px)");
+
+        if (mediaQuery.matches) {
+          if (div.style.height === "650px") {
+            div.style.height = "450px";
+          } else {
+            div.style.height = "650px";
+          }
+
+          if (guide2.style.top === "1610px") {
+            guide2.style.top = "1410px";
+          } else {
+            guide2.style.top = "1610px";
+          }
+
+          if (guide3.style.top === "1940px") {
+            guide3.style.top = "1740px";
+          } else {
+            guide3.style.top = "1940px";
+          }
+        }
+        if (mediaQuery1.matches) {
+          if (
+            div.style.height === "1000px" &&
+            div.style.backgroundRepeat === "repeat-y" &&
+            div.style.backgroundSize === "contain"
+          ) {
+            div.style.backgroundRepeat = "no-repeat";
+            div.style.height = "490px";
+            div.style.backgroundSize = "cover";
+          } else {
+            div.style.height = "1000px";
+            div.style.backgroundRepeat = "repeat-y";
+            div.style.backgroundSize = "contain";
+          }
+          if (guide2.style.top === "1930px") {
+            guide2.style.top = "1420px";
+          } else {
+            guide2.style.top = "1930px";
+          }
+          if (guide3.style.top === "2540px") {
+            guide3.style.top = "2020px";
+          } else {
+            guide3.style.top = "2540px";
+          }
+        }
+
+        if (image.classList.contains("hidden")) {
+          image.classList.remove("hidden");
+          image.classList.add("visible");
+        } else {
+          image.classList.remove("visible");
+          image.classList.add("hidden");
+        } /*---- error data
+        if (
+          div.style.height === "1000px" &&
+          div.style.backgroundRepeat === "repeat-y" &&
+          div.style.backgroundSize === "contain"
+        ) {
+          div.style.backgroundRepeat = "no-repeat";
+          div.style.height = "490px";
+          div.style.backgroundSize = "cover";
+        } else {
+          div.style.height = "1000px";
+          div.style.backgroundRepeat = "repeat-y";
+          div.style.backgroundSize = "contain";
+        }
+        if (guide2.style.top === "1840px") {
+          guide2.style.top = "1300px";
+        } else {
+          guide2.style.top = "1840px";
+        }
+        if (guide3.style.top === "2540px") {
+          guide3.style.top = "2020px";
+        } else {
+          guide3.style.top = "2540px";
+        }----*/
+      }
+    </script>
+
+    <!--for swiper-->
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "vertical",
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+
+    <!--for the combination dials-->
+
+    <script>
+      // Store the correct combination here
+      const correctCombination = "6210001000";
+
+      // Add click event listener to the "Check Guess" button
+      const checkButton = document.getElementById("checkBtn");
+      checkButton.addEventListener("click", checkGuess);
+
+      // Function to check the guess
+      function checkGuess() {
+        // Retrieve the guessed values from the input fields
+        const guessedCombination = Array.from(
+          document.querySelectorAll(".dial input")
+        )
+          .map((input) => input.value)
+          .join("");
+
+        // Check if the guessed combination matches the correct combination
+        if (guessedCombination === correctCombination) {
+          alert("You are correct!");
+        } else {
+          alert("You are wrong. Try again!");
+        }
+      }
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
+
+
+  </body>
+</html>
